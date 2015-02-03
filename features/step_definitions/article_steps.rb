@@ -4,8 +4,9 @@ Given(/^I have articles titled (.+)$/) do |titles|
   end
 end
 
-When(/^I go to the list of articles$/) do
-  visit articles_path
+When(/^I go to "(.*?)"$/) do |page_name|
+  # visit articles_path
+  visit path_to(page_name)
 end
 
 Then(/^I should see "(.*?)"$/) do |title|
@@ -16,8 +17,8 @@ Given(/^I have no articles$/) do
   Article.delete_all
 end
 
-Given(/^I am on the list of articles$/) do
-  visit articles_path
+Given(/^I am on "(.*?)"$/) do |page_name|
+  visit path_to(page_name)
 end
 
 When(/^I follow "(.*?)"$/) do |arg1|

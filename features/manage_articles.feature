@@ -5,13 +5,13 @@ Feature: Manage Articles
 
 Scenario: Articles List
   Given I have articles titled Pizza, Breadsticks
-  When I go to the list of articles
+  When I go to "the list of articles"
   Then I should see "Pizza"
   And I should see "Breadsticks"
 
 Scenario: Create Valid Article
   Given I have no articles
-  And I am on the list of articles
+  And I am on "the list of articles"
   When I follow "New Article"
   And I fill in "Title" with "Spuds"
   And I fill in "Content" with "Delicious potato wedges!"
