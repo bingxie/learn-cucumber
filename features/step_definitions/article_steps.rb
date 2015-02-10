@@ -9,10 +9,6 @@ When(/^I go to "(.*?)"$/) do |page_name|
   visit path_to(page_name)
 end
 
-Then(/^I should see "(.*?)"$/) do |title|
-  page.should have_content title
-end
-
 Given(/^I have no articles$/) do
   Article.delete_all
 end
