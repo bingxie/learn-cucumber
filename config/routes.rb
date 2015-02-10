@@ -1,5 +1,5 @@
 LearnCucumber::Application.routes.draw do
-  get "products/show"
+  # get "products/show"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
@@ -21,7 +21,7 @@ LearnCucumber::Application.routes.draw do
 
   # Sample resource route (maps HTTP verbs to controller actions automatically):
   resources :articles, only: [:index, :new, :create]
-  resources :products, only: [:show]
+  resources :products, only: [:show, :index]
 
   # Sample resource route with options:
   #   resources :products do
