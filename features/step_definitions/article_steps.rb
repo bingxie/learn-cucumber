@@ -10,7 +10,7 @@ Given(/^I have no articles$/) do
   Article.delete_all
 end
 
-Given(/^I am on "(.*?)"$/) do |page_name|
+Given(/^I am on (.*?)$/) do |page_name|
   visit path_to(page_name)
 end
 

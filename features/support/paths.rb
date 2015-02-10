@@ -4,8 +4,8 @@ module NavigationHelpers
 
     when /the homepage/
       root_path
-    when /the list of articles/
-      articles_path
+    when /the list of (.+)/
+      send "#{$1}_path"
     when /the show page for (.+)/
       polymorphic_path(model($1))
     else
