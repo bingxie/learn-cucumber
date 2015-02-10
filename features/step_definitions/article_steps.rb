@@ -4,10 +4,7 @@ Given(/^I have articles titled (.+)$/) do |titles|
   end
 end
 
-When(/^I go to "(.*?)"$/) do |page_name|
-  # visit articles_path
-  visit path_to(page_name)
-end
+
 
 Given(/^I have no articles$/) do
   Article.delete_all
