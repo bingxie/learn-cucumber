@@ -14,3 +14,5 @@
 /log/*.log
 /tmp
 app/assets/javascripts/articles_controller.js.coffee
+
+.DS_Store
